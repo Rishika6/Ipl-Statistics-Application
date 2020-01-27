@@ -40,10 +40,9 @@ public class PlayerData {
 	public static void display(BufferedReader br,String name)
 	{
 		try {
-			
+			int totrun=0;
 			String onerowdata="";
 			int f=0;
-			System.out.println("Team              |            Player  | Tournament   |   Mat |   BattingInn  | NotOuts |  Runs |  HighestSc |   BatAvg  |  BallsFaced  |  BatingStrike rate |  100s  |  50s  | 0s |  4s |  6s |  BowlingInnings |   OversBowled  |  MaidensBowled |  RunsConceded |  Wickets  | BowlingFigures |  BowlingAvg  |  BowlingEcoRate |  BowlingStrikeRate |  4+InningsWick  | 5+InningsWicks  | Catches |  StumpingsMade");
 			while((onerowdata=br.readLine())!=null)
 			{
 				String[] datafromrow=onerowdata.split(",");
@@ -52,22 +51,51 @@ public class PlayerData {
 				  if(datafromrow[j].contains(name)) {
 					  f=1;
 					  
-					for(int i=0;i<datafromrow.length;i++)
-					{
-						
-						System.out.print(datafromrow[i]+"\t|");
-					}
-				  
+					System.out.println("Team:"+datafromrow[0]);
+					System.out.println("Player:"+datafromrow[1]);
+					System.out.println("Tournament:"+datafromrow[2]);
+					System.out.println("Matches:"+datafromrow[3]);
+					System.out.println("Batting Innings:"+datafromrow[4]);
+					System.out.println("NotOuts:"+datafromrow[5]);
+					System.out.println("Runs:"+datafromrow[6]);
+					totrun=totrun+Integer.parseInt(datafromrow[6]);
+					System.out.println("Highest Score:"+datafromrow[7]);
+					  
+					System.out.println("Batting Average:"+datafromrow[8]);
+					System.out.println("Balls Faced:"+datafromrow[9]);
+					System.out.println("Batting strike Rate:"+datafromrow[10]);
+					System.out.println("100s:"+datafromrow[11]);
+					System.out.println("50s:"+datafromrow[12]);
+					System.out.println("0s:"+datafromrow[13]);
+					System.out.println("4s:"+datafromrow[14]);
+					System.out.println("6s"+datafromrow[15]);
+					System.out.println("Bowling Innings:"+datafromrow[16]);
+					System.out.println("Overs Bowled:"+datafromrow[17]);
+					System.out.println("Maidens Bowled:"+datafromrow[18]);
+					System.out.println("Runs Conceded:"+datafromrow[19]);
+					System.out.println("Wickets taken:"+datafromrow[20]);
+					System.out.println("Best Bowling Figures:"+datafromrow[21]);
+					System.out.println("Bowling average:"+datafromrow[22]);
+					System.out.println("Bowling Economy"+datafromrow[23]);
+					
+					System.out.println("Bowling strike rate:"+datafromrow[24]);
+					System.out.println("4+Innings Wickets:"+datafromrow[25]);
+					System.out.println("5+Innings Wickets:"+datafromrow[26]);
+					System.out.println("Catches:"+datafromrow[27]);
+					System.out.println("Stumpings Made:"+datafromrow[28]);
 					System.out.println();
+					
 				  }
 				  
 				}
 			}
+			
+			
 			if(f==0)
 				System.out.println("No Data");
-			
-			
-		}
+			else
+				System.out.println("Total Runs in three years:"+totrun);
+			}
 		catch(Exception e)
 		{
 		
