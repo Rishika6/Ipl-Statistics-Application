@@ -68,7 +68,7 @@ public class PlayerData {
 					System.out.println("50s:"+datafromrow[12]);
 					System.out.println("0s:"+datafromrow[13]);
 					System.out.println("4s:"+datafromrow[14]);
-					System.out.println("6s"+datafromrow[15]);
+					System.out.println("6s:"+datafromrow[15]);
 					System.out.println("Bowling Innings:"+datafromrow[16]);
 					System.out.println("Overs Bowled:"+datafromrow[17]);
 					System.out.println("Maidens Bowled:"+datafromrow[18]);
@@ -94,7 +94,7 @@ public class PlayerData {
 			if(f==0)
 				System.out.println("No Data");
 			else
-				System.out.println("Total Runs in three years:"+totrun);
+				System.out.println("Total Runs in four years:"+totrun);
 			}
 		catch(Exception e)
 		{
