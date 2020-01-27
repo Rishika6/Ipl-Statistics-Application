@@ -5,9 +5,23 @@ import java.io.FileReader;
 
 public class PlayerData {
 
+	public static void main(String[] args)
+	{
+	     Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the name of a player");
+        String name=sc.nextLine();
+        
+        BufferedReader br=null;
+        
+        
+        readfile(br,name);
+      
+         
+	}
+
 	
 	
-	public void readfile(BufferedReader br,String name)
+	public static void readfile(BufferedReader br,String name)
 	{
 		try {
 			 br=new BufferedReader(new FileReader("C:\\Users\\HP\\Desktop\\projects\\data.csv"));
@@ -23,7 +37,7 @@ public class PlayerData {
 	
 
 	
-	public void display(BufferedReader br,String name)
+	public static void display(BufferedReader br,String name)
 	{
 		try {
 			
